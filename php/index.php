@@ -40,6 +40,13 @@
 
     ];
 
+    foreach ($hotels as $index => $hotel){
+        foreach($hotel as $key => $value){
+            if ($key == 'name'){
+                echo $value;
+            }
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -60,12 +67,8 @@
 <body>
     <div class="container">
     <h1>HOTELS</h1>
-    <ul>
-    <?php foreach($hotels as $hotel) ?>
-        <li>
-            <?php echo $hotel['name']; ?>
-        </li>
-    </ul>
+
+
     </div>
 </body>
 </html>
