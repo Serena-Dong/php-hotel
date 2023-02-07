@@ -56,7 +56,16 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
-    
+    <div class="container">
+    <h1>HOTELS</h1>
+    <ul>
+    <?php foreach($hotels as $hotel) ?>
+        <li>
+            <?php echo $hotel['name']; ?>
+        </li>
+    </ul>
+    </div>
 </body>
 </html>
