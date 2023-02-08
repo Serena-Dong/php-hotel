@@ -75,14 +75,13 @@
   <tbody>
   <?php foreach ($hotels as $hotel) : ?>
     <tr>
-      <th scope="row"><?php $hotel['name'] ?></th>
-      <td><?php $hotel['description'] ?></td>
-      <td><?php $hotel['parking'] ? 'si': 'no' ?></td>
-      <td><?php $hotel['vote'] ?></td>
-      <td><?php $hotel['distance'] ?>km</td>
+      <th scope="row"><?= $hotel['name'] ?></th>
+      <td><?= $hotel['description'] ?></td>
+      <td><?= $hotel['parking'] ? 'si': 'no' ?></td>
+      <td><?= $hotel['vote']?></td>
+      <td><?= $hotel['distance'] ?>km</td>
     </tr>
   <?php endforeach ?>
-    
   </tbody>
 </table>
 
