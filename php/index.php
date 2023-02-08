@@ -40,13 +40,6 @@
 
     ];
 
-    foreach ($hotels as $index => $hotel){
-        foreach($hotel as $key => $value){
-            if ($key == 'name'){
-                echo $value;
-            }
-        }
-    }
 ?>
 
 <!DOCTYPE html>
@@ -56,19 +49,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP Hotel</title>
-    
-    
+
     <!-- BS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
     <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css">
+    
 </head>
 
 <body>
     <div class="container">
     <h1>HOTELS</h1>
 
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Descrizione</th>
+      <th scope="col">Parcheggio</th>
+      <th scope="col">Voto</th>
+      <th scope="col">Distanza</th>
+    </tr>
+  </thead>
+  <tbody>
+  <?php foreach ($hotels as $hotel) : ?>
+    <tr>
+      <th scope="row"><?php $hotel['name'] ?></th>
+      <td><?php $hotel['description'] ?></td>
+      <td><?php $hotel['parking'] ? 'si': 'no' ?></td>
+      <td><?php $hotel['vote'] ?></td>
+      <td><?php $hotel['distance'] ?>km</td>
+    </tr>
+  <?php endforeach ?>
+    
+  </tbody>
+</table>
 
-    </div>
+
+    
 </body>
 </html>
